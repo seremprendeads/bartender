@@ -97,20 +97,6 @@ nav {
     color: #e74c3c;
 }
 
-.btn-subscribe {
-    background: #e74c3c;
-    color: #fff;
-    padding: 0.6rem 1.5rem;
-    border-radius: 25px;
-    border: 2px solid #e74c3c;
-    transition: all 0.3s;
-}
-
-.btn-subscribe:hover {
-    background: transparent;
-    color: #e74c3c;
-}
-
 .social-icons {
     display: flex;
     gap: 1rem;
@@ -191,12 +177,6 @@ nav {
     transform: scale(1.1) rotate(5deg);
 }
 
-.whatsapp-icon {
-    width: 22px;
-    height: 22px;
-    fill: currentColor;
-}
-
 .menu-toggle {
     display: none;
     flex-direction: column;
@@ -210,19 +190,6 @@ nav {
     background: #fff;
     transition: all 0.3s;
     transform-origin: center;
-}
-
-.menu-toggle.active span:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-}
-
-.menu-toggle.active span:nth-child(2) {
-    opacity: 0;
-    transform: translateX(-20px);
-}
-
-.menu-toggle.active span:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
 }
 
 .hero {
@@ -240,11 +207,10 @@ nav {
     position: absolute;
     top: 50%;
     left: 50%;
-    min-width: 50%;
-    min-height: 50%;
+    min-width: 100%;
+    min-height: 100%;
     transform: translate(-50%, -50%);
     object-fit: cover;
-   
 }
 
 .hero-overlay {
@@ -283,10 +249,109 @@ nav {
     color: #f0cf5a;
     letter-spacing: 3px;
     margin-top: 10px;
-    padding: 0 6rem;
+    padding: 0 2rem;
     font-weight: bold;
 }
 
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 5px;
+    text-shadow: 2px 2px 20px rgb(231 76 60);
+    margin: 0;
+}
+
+/* Botones móviles en hero */
+.hero-mobile-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+    padding: 0 2rem;
+    width: 100%;
+    max-width: 400px;
+}
+
+.hero-btn {
+    padding: 14px 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.hero-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: left 0.5s ease;
+}
+
+.hero-btn:hover::before {
+    left: 100%;
+}
+
+.hero-btn:active {
+    transform: scale(0.98);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #fcad79 0%, #ff4757 100%);
+    color: white;
+    border: 2px solid transparent;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(255, 71, 87, 0.4);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: white;
+    border: 2px solid #fff;
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(255, 255, 255, 0.2);
+}
+
+.hero-btn svg {
+    transition: transform 0.3s ease;
+}
+
+.hero-btn:hover svg {
+    transform: scale(1.1) rotate(5deg);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media Queries */
 @media (min-width: 768px) {
     .logo-hero-container {
         flex-direction: row;
@@ -301,14 +366,35 @@ nav {
     .hero .subtitle {
         padding: 0;
     }
+
+    .hero h1 {
+        font-size: 5rem;
+    }
+
+    /* Ocultar botones en desktop */
+    .hero-mobile-buttons {
+        display: none;
+    }
 }
 
-.hero h1 {
-    font-size: 5rem;
-    font-weight: 700;
-    letter-spacing: 5px;
-    text-shadow: 2px 2px 20px rgb(231 76 60);
-    margin: 0;
+@media (max-width: 767px) {
+    .nav-links,
+    .social-icons,
+    .contact-button {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero .subtitle {
+        font-size: 1.2rem;
+    }
 }
 
 .about {
@@ -1675,6 +1761,7 @@ footer .social-icons {
                 font-size: 35px;
             }
         }
+		
     </style>
 </head>
 <body>
@@ -1714,25 +1801,38 @@ footer .social-icons {
         </div>
     </nav>
 
-  <section class="hero" id="home">
-  <video class="hero-video" autoplay muted loop playsinline poster="https://res.cloudinary.com/dliredzt9/image/upload/v1760302207/sobremi3_zbu9cu.png">
-    <source src="https://res.cloudinary.com/dliredzt9/video/upload/v1760299357/hero-video_ybsolu.mp4" type="video/mp4">
-  </video>
-  <div class="hero-overlay"></div>
+    <section class="hero" id="home">
+        <video class="hero-video" autoplay muted loop playsinline poster="https://res.cloudinary.com/dliredzt9/image/upload/v1760302207/sobremi3_zbu9cu.png">
+            <source src="https://res.cloudinary.com/dliredzt9/video/upload/v1760299357/hero-video_ybsolu.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
 
-  <div class="hero-content">
-<div class="logo-hero-container">
-  <img src="https://res.cloudinary.com/dliredzt9/image/upload/v1760301802/logo2_lptkwl.png" 
-       alt="Santo Inferno Logo" style="weight:260px;height:260px;"
-       ">
-  
- <div class="hero-text">
-    <h1>Bartender</h1>
-   <p class="subtitle">Servicio de Barra Integral</p> 
-  </div> 
-</div>
-  </div>
-</section>
+        <div class="hero-content">
+            <div class="logo-hero-container">
+                <img src="https://res.cloudinary.com/dliredzt9/image/upload/v1760301802/logo2_lptkwl.png" 
+                     alt="Santo Inferno Logo" 
+                     style="width:260px;height:260px;">
+                
+                <div class="hero-text">
+                    <h1>Bartender</h1>
+                    <p class="subtitle">Servicio de Barra Integral</p>
+                </div>
+            </div>
+
+            <!-- Botones móviles -->
+            <div class="hero-mobile-buttons">
+                <a href="#about" class="hero-btn btn-secondary">
+                    Saber Más
+                </a>
+                <a href="#suscribete" class="hero-btn btn-primary">
+                    Hablemos
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
 
 
 	<section class="banner">
