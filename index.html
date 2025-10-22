@@ -2469,7 +2469,9 @@ Me inspiro en los sabores, las personas y los buenos momentos. Ya sea en una bar
 </a><a href="#"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
   
 	   </div>
-       <p>© 2025 - Details Barras - Bartender. Todos los derechos reservados.</p>
+   <p>© <span id="currentYear">2025</span> - Details Barras - Bartender. Todos los derechos reservados.</p>
+
+
     <p>Diseño web profesional ❤️ by <i><a href="https://seremprende.com" target="_blank" style="color: #ffa5007d;">seremprende.com</a></i></p>
     </footer>
 <a href="https://wa.me/5491134597788?text=Hola,%20vengo%20del%20sitio%20web%20Details%20Barras%20-%20Bartender%20y%20quiero%20saber%20por%20presupuesto,%20gracias"
@@ -2499,6 +2501,7 @@ Me inspiro en los sabores, las personas y los buenos momentos. Ya sea en una bar
     </svg>
 </a>
     <script>
+	//Menú
         const menuToggle = document.querySelector('.menu-toggle');
         const navLinks = document.querySelector('.nav-links');
 
@@ -2733,7 +2736,7 @@ document.addEventListener('keydown', (e) => {
     const textoWhatsApp = `Hola Caro de Details Barras! Me contacto desde tu sitio web:\n\n*Nombre:* ${nombre}\n*Email:* ${email}\n*Teléfono:* ${telefono}\n*Mensaje:* ${mensaje}`;
     
     // Tu número de WhatsApp (reemplaza con tu número, incluyendo código de país sin +)
-    const numeroWhatsApp = '5491159554443'; // Ejemplo: 549 (Argentina) + código de área + número
+    const numeroWhatsApp = '5491134597788'; // Ejemplo: 549 (Argentina) + código de área + número
     
     // Codificar el mensaje para URL
     const mensajeCodificado = encodeURIComponent(textoWhatsApp);
@@ -2744,6 +2747,14 @@ document.addEventListener('keydown', (e) => {
     // Abrir WhatsApp en una nueva ventana
     window.open(urlWhatsApp, '_blank');
 });
+// Actualizar año automáticamente
+(function() {
+    const yearElement = document.getElementById('currentYear');
+    const currentYear = new Date().getFullYear();
+    if (yearElement) {
+        yearElement.textContent = currentYear;
+    }
+})();
 
     </script>
 </body>
