@@ -250,6 +250,7 @@ nav {
     font-size: 0.9rem;
     letter-spacing: 1px;
     transition: color 0.3s;
+	font-weight: bold;
 }
 
 .nav-links a:hover {
@@ -598,12 +599,14 @@ nav {
 }
 
 .about-content .quote {
-    font-style: italic;
     color: #fff;
     font-size: 1.2rem;
     margin-bottom: 1.5rem;
     padding-left: 1.5rem;
     border-left: 3px solid #e74c3c;
+	 background-color: hsl(0deg 0% 50.2% / 30%);
+    border-radius: 20px;
+	padding: 1.5rem;
 }
 
 .about-content p {
@@ -635,6 +638,9 @@ nav {
   line-height: 1.35;
   margin: 0.4rem 0 1.2rem;
   letter-spacing: 0.2px;
+  background-color: rgb(255 255 0 / 13%);
+  padding: 1.5rem;
+  border-radius:10px;
 }
 
 /* Palabras resaltadas */
@@ -819,8 +825,6 @@ nav {
     position: relative;
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 20px 60px rgba(255, 71, 87, 0.4);
-    background: #000;
     transition: all 0.4s ease;
     height: 600px;
     width: 100%;
@@ -838,50 +842,6 @@ nav {
     object-fit: cover;
 }
 
-.video-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.3);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 1;
-    transition: opacity 0.3s ease;
-    pointer-events: none;
-}
-
-.video-container.playing .video-overlay {
-    opacity: 0;
-}
-
-.play-button {
-    width: 100px;
-    height: 100px;
-    background: linear-gradient(135deg, #fcad79 0%, #ff4757 100%);
-    border: none;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    pointer-events: all;
-}
-
-.play-button:hover {
-    transform: scale(1.15);
-    box-shadow: 0 15px 40px rgba(255, 71, 87, 0.7);
-}
-
-.play-button svg {
-    width: 45px;
-    height: 45px;
-    fill: #fff;
-    margin-left: 5px;
-}
 
 .servicio-features {
     display: grid;
@@ -1979,7 +1939,7 @@ footer .social-icons {
     }
     
     .video-container {
-        height: 450px;
+        height: 600px;
     }
     
     .servicio-features {
@@ -2081,8 +2041,8 @@ footer .social-icons {
         text-align: center;
     }
 	
-    .video-container {
-        height: 350px;
+   .video-container {
+        height: 600px;
     }
     
     .servicio-features {
@@ -2090,16 +2050,7 @@ footer .social-icons {
         gap: 1.5rem;
     }
     
-    .play-button {
-        width: 70px;
-        height: 70px;
-    }
-    
-    .play-button svg {
-        width: 30px;
-        height: 30px;
-    }
-    
+
     .cta-content h2 {
         font-size: 2rem;
     }
@@ -2317,11 +2268,19 @@ footer .social-icons {
             </div>
             <div class="about-content">
                 <h2>Sobre Detail</h2>
-                <p class="quote">Soy Caro Villavicencio, y éste es mi servicio de bar móvil, pensado con mucho cariño, desde el conocimiento y la experiencia de haber trabajado en empresas y bares reconocidos por años.
-En DETAIL me ocupo personalmente de cada detalle porque estoy detrás de la barra, donde se sirven cócteles ricos y bien hechos.
-Elijo trabajar en encuentros de hasta 100 personas porque soy detallista y quiero estar en todo.
-Mi objetivo es que sólo te preocupes en disfrutar de tu evento. No solo sé hacerlo bien: me gusta hacerlo.</p>
-                <p>🤍 En cada detalle.</p>
+                <p class="quote"><b>Soy</b> <span class="resaltar--fuerte">Caro Villavicencio</span><i> y este es mi </i>   <span class="resaltar--fuerte"> Servicio de Bar Móvil</span>,<i> creado con cariño</i>🤍<i> y
+				con la</i><span class="resaltar--fuerte"> experiencia de haber trabajado en bares y barras reconocidas </span> <i>durante años.</i> 
+				<b>En</b> <span class="resaltar--fuerte">DETAIL </span><i>me</i> <span class="resaltar--fuerte">ocupo personalmente de cada detalle</span><i>, porque</i> <span class="resaltar--fuerte">estoy ahí</span> : <i>detrás de la barra,</i>
+				<span class="resaltar--fuerte">donde se sirven cócteles ricos y bien hechos</span> .
+				<br><br> 
+				<span class="resaltar--fuerte" style=" text-decoration: underline;text-decoration-thickness: 3px;text-underline-offset: 3px;     
+   ">Exclusividad</span><span class="resaltar--fuerte"> :</span><br>
+				<b>Elijo trabajar</b> en encuentros de<span class="resaltar--fuerte"> hasta 100 
+				personas</span> porque <b>soy detallista y quiero estar en todo.</b>
+				Mi objetivo es que <b>solo te ocupes de disfrutar de tu evento.</b><br><br>
+				<b>No solo sé hacerlo bien :
+				me gusta hacerlo</b>.</p>
+                <p><b>🤍 En cada detalle.</b></p>
             </div>
         </div>
     </section>
@@ -2382,13 +2341,7 @@ Mi objetivo es que sólo te preocupes en disfrutar de tu evento. No solo sé hac
                             <source src="https://res.cloudinary.com/dliredzt9/video/upload/v1762549234/1_evento_en_menos_de_1_minuto.En_la_publicaci%C3%B3n_anterior_les_cont%C3%A9_de_qu%C3%A9_se_trata_esta_modalida_lo3udq.mp4" type="video/mp4">
                             Tu navegador no soporta el elemento de video.
                         </video>
-                        <div class="video-overlay">
-                            <button class="play-button" id="playButton">
-                                <svg viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M8 5v14l11-7z"/>
-                                </svg>
-                            </button>
-                        </div>
+          
                     </div>
                 </div>
             </div>
