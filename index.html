@@ -2,12 +2,13 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <!-- Evitar indexación en motores de búsqueda -->
-    <meta name="robots" content="noindex, nofollow">
-    <meta name="googlebot" content="noindex, nofollow">
-    <meta name="googlebot-news" content="noindex, nofollow">
-    <meta name="bingbot" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- SEO allowed -->
+<meta name="robots" content="index, follow">
+<meta name="googlebot" content="index, follow">
+<meta name="bingbot" content="index, follow">
+
  <!-- ===================================== -->
     <!-- ✅ OPTIMIZACIÓN LCP CRÍTICA -->
     <!-- ===================================== -->
@@ -604,7 +605,6 @@ nav {
     margin-bottom: 1.5rem;
     padding-left: 1.5rem;
     border-left: 3px solid #e74c3c;
-	 background-color: hsl(0deg 0% 50.2% / 30%);
     border-radius: 20px;
 	padding: 1.5rem;
 }
@@ -638,24 +638,10 @@ nav {
   line-height: 1.35;
   margin: 0.4rem 0 1.2rem;
   letter-spacing: 0.2px;
-  background-color: rgb(255 255 0 / 13%);
-  padding: 1.5rem;
   border-radius:10px;
 }
 
-/* Palabras resaltadas */
-.resaltar,
-.resaltar--fuerte {
-  color: #ffffff;
-  font-weight: 800;
-  ext-decoration-thickness: 1.5px;
-  font-size: 1.2rem;
-}
 
-.resaltar--fuerte {
-  font-weight: 800;
-  font-size: 1.2em;
-}
 
 /* ===================================== */
 /* BANNER SECTION */
@@ -805,10 +791,9 @@ nav {
 .servicio-text p {
     font-size: 1.1rem;
     line-height: 1.9;
-    color: #ddd;
+    color: #f6ecec;
     margin-bottom: 0;
-    text-align: justify;
-}
+   }
 
 .servicio-text p:first-child {
     font-size: 1.2rem;
@@ -894,6 +879,8 @@ nav {
     justify-content: center;
     transition: all 0.3s ease;
 }
+
+.
 
 .feature-item:hover .feature-icon {
     transform: rotateY(360deg);
@@ -1233,8 +1220,9 @@ nav {
 
 .testimonios-track {
     display: flex;
-    animation: scroll 60s linear infinite;
     gap: 2rem;
+	    animation: scroll 100s 
+linear infinite;
 }
 
 .testimonios-track:hover {
@@ -1242,7 +1230,7 @@ nav {
 }
 
 .testimonio-card {
-    min-width: 320px;
+    min-width: 350px;
     background: rgba(26, 26, 26, 0.9);
     backdrop-filter: blur(10px);
     padding: 2rem;
@@ -1716,6 +1704,7 @@ footer {
     padding: 3rem 5%;
     text-align: center;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
+	font-weight: normal;
 }
 
 footer p {
@@ -1725,6 +1714,10 @@ footer p {
 footer .social-icons {
     justify-content: center;
     margin-bottom: 1rem;
+}
+
+.feature-item h3.titulo-modulobarra {
+ padding-top:16px;
 }
 
 /* ===================================== */
@@ -1908,6 +1901,9 @@ footer .social-icons {
     }
 }
 
+
+
+
 /* ===================================== */
 /* MEDIA QUERIES - RESPONSIVE */
 /* ===================================== */
@@ -1930,6 +1926,7 @@ footer .social-icons {
     .hero-mobile-buttons {
         display: none;
     }
+
 }
 
 @media (max-width: 1024px) {
@@ -2080,6 +2077,10 @@ footer .social-icons {
     .tooltip {
         display: none;
     }
+	.feature-item h3.titulo-modulobarra {
+ padding-top:0px;
+ 
+}
 }
 
 @media (max-width: 640px) {
@@ -2268,18 +2269,16 @@ footer .social-icons {
             </div>
             <div class="about-content">
                 <h2>Sobre Detail</h2>
-                <p class="quote"><b>Soy</b> <span class="resaltar--fuerte">Caro Villavicencio</span><i> y este es mi </i>   <span class="resaltar--fuerte"> Servicio de Bar Móvil</span>,<i> creado con cariño y
-				con la</i><span class="resaltar--fuerte"> experiencia de haber trabajado en bares y barras reconocidas </span> <i>durante años.</i> 
-				<b>En</b> <span class="resaltar--fuerte">DETAIL </span><i>me</i> <span class="resaltar--fuerte">ocupo personalmente de cada detalle</span><i>, porque</i> <span class="resaltar--fuerte">estoy ahí</span> : <i>detrás de la barra,</i>
-				<span class="resaltar--fuerte">donde se sirven cócteles ricos y bien hechos</span> .
+                <p class="quote">Soy Caro Villavicencio y este es mi Servicio de Bar Móvil, creado con cariño y
+				con la experiencia de haber trabajado en bares y barras reconocidas durante años.
+				En DETAIL me ocupo personalmente de cada detalle, porque estoy ahí: detrás de la barra,
+				donde se sirven cócteles ricos y bien hechos
 				<br><br> 
-				<span class="resaltar--fuerte" style=" text-decoration: underline;text-decoration-thickness: 3px;text-underline-offset: 3px;     
-   ">Exclusividad</span><span class="resaltar--fuerte"> :</span><br>
-				<b>Elijo trabajar</b> en encuentros de<span class="resaltar--fuerte"> hasta 100 
-				personas</span> porque <b>soy detallista y quiero estar en todo.</b>
-				Mi objetivo es que <b>solo te ocupes de disfrutar de tu evento.</b><br><br>
-				<b>No solo sé hacerlo bien :
-				me gusta hacerlo</b>.</p>
+				Elijo trabajar en encuentros de hasta 100 
+				personas porque soy detallista y quiero estar en todo.
+				Mi objetivo es que solo te ocupes de disfrutar de tu evento.<br><br>
+				No solo sé hacerlo bien :
+				me gusta hacerlo.</p>
                 <p><b>🤍 En cada detalle.</b></p>
             </div>
         </div>
@@ -2299,35 +2298,18 @@ footer .social-icons {
   <h2 class="titulo-servicio">SERVICIO DE BARRA INTEGRAL</h2>
 
   <p class="texto-servicio">
-    <span class="resaltar--fuerte" style=" text-decoration: underline;text-decoration-thickness: 3px;text-underline-offset: 3px;">Es la experiencia completa</span><br>
-    <span class="resaltar">Un bar móvil</span> donde quieras. Incluye 
-    <span class="resaltar">todo lo necesario</span>: 
-    <span class="resaltar">barra equipada</span>, 
-    <span class="resaltar">bebidas</span>, 
-    <span class="resaltar">insumos</span>, 
-    <span class="resaltar">cristalería</span>, 
-    <span class="resaltar">hielo</span>, etc.
-    Cada detalle está pensado y organizado para que el servicio sea 
-    <span class="resaltar--fuerte">ideal</span>, desde el 
-    <span class="resaltar">primer cóctel</span> hasta el 
-    <span class="resaltar">último brindis</span>.
+   Es la experiencia completa,
+un bar móvil donde quieras. Incluye todo lo necesario: barra equipada, bebidas, insumos, cristalería, hielo, etc.
+Cada detalle está pensado y organizado para que el servicio sea ideal, desde el primer cóctel hasta el último brindis.
   </p>
 
   <!-- SERVICIO DE BARTENDING -->
   <h2 class="titulo-servicio">SERVICIO DE BARTENDING</h2>
 
   <p class="texto-servicio">
-    <span class="resaltar--fuerte">Consiste</span> en el<span class="resaltar--fuerte"> servicio de bartender</span> 
-    con <span class="resaltar">asesoramiento en la compra</span> de 
-    <span class="resaltar">bebidas</span>, 
-    <span class="resaltar">jugos</span>, 
-    <span class="resaltar">hielo</span> e 
-    <span class="resaltar">insumos</span>, a cargo del cliente.
-    Esta modalidad es ideal para quienes 
-    <span class="resaltar">no requieran módulo de barra</span>.
-    Incluye <span class="resaltar--fuerte">cristalería</span> y 
-    <span class="resaltar">todo lo necesario</span> para montar una 
-    <span class="resaltar--fuerte">barra funcional</span>.
+   Consiste en el servicio de bartender con asesoramiento en la compra de bebidas, jugos, hielo e insumos, a cargo del cliente.
+Esta modalidad es ideal para quienes no requieran módulo de barra.
+Incluye cristalería y todo lo necesario para montar una barra funcional.
   </p>
 </section>
 
@@ -2370,8 +2352,9 @@ footer .social-icons {
                             <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
                         </svg>
                     </div>
-                    <h3>Módulo De Barra</h3>
-                    <p>Opcional</p>
+				
+             <h3 class="titulo-modulobarra">Módulo de Barra</h3>
+                     <p>Opcional</p>
                 </div>
                 <div class="feature-item">
                     <div class="feature-icon">
@@ -2411,7 +2394,7 @@ footer .social-icons {
 					</div>
                     <div class="galeria-info">
                         <h3>Cumpleaños</h3>
-                        <p>📍 Villa Urquiza 2025</p>
+                        <p>📍 Villa Urquiza</p>
                         <button class="btn-ver-mas">
                             Ver más
                             <svg viewBox="0 0 24 24" fill="currentColor">
@@ -2455,7 +2438,7 @@ footer .social-icons {
                     </div>
                     <div class="galeria-info">
 				    	<h3>Cumpleaños </h3>
-                        <p>📍Villa Devoto 2025</p>
+                        <p>📍Villa Devoto</p>
                         <button class="btn-ver-mas">
                             Ver más
                             <svg viewBox="0 0 24 24" fill="currentColor">
@@ -2481,8 +2464,8 @@ footer .social-icons {
                              height="380">
                     </div>
                     <div class="galeria-info">
-					  <h3>Cumpleaños</h3>
-                        <p>📍 Rincón de Milberg</p>
+				<h3>Cumpleaños</h3> 
+                        <p>📍Rincón de Milberg</p>
 					      <button class="btn-ver-mas">
                             Ver más
                             <svg viewBox="0 0 24 24" fill="currentColor">
@@ -2657,7 +2640,9 @@ footer .social-icons {
                     <div class="testimonio-card">
                         <div class="testimonio-stars"></div>
                         <p class="testimonio-text">"Gracias Caro! Salió todo divino. Los detalles, la barra, ustedes!! Gracias porque no paro de recibir elogios"</p>
-                        <div class="testimonio-author">
+                         <br><br>                       
+					   <div class="testimonio-author">
+					    <br><br>
                             <div class="author-avatar">L</div>
                             <div class="author-info">
                                 <h4>Liliana</h4>
@@ -2670,6 +2655,7 @@ footer .social-icons {
                         <div class="testimonio-stars"></div>
                         <p class="testimonio-text">"La mejor barra del mundo!! Unos genios, me consintieron todo los pedidos desde el primer llamado hasta el último minuto de la fiesta"</p>
                         <div class="testimonio-author">
+						 <br><br><br><br>
                             <div class="author-avatar">C</div>
                             <div class="author-info">
                                 <h4>Carolina</h4>
@@ -2681,7 +2667,7 @@ footer .social-icons {
                     <div class="testimonio-card">
                         <div class="testimonio-stars"></div>
                         <p class="testimonio-text">"Qué lindo es contar con vos y con tu magia"</p>
-						<br><br>
+							<br><br><br>
                         <div class="testimonio-author">
                             <div class="author-avatar">B</div>
                             <div class="author-info">
@@ -2694,7 +2680,7 @@ footer .social-icons {
                     <div class="testimonio-card">
                         <div class="testimonio-stars"></div>
                         <p class="testimonio-text">"Gracias Caro!! Sos una genia, amé el servicio!! Todos mis invitados quedaron fascinados con tus tragos"</p>
-<br>
+                       <br><br>
 					  <div class="testimonio-author">
                             <div class="author-avatar">J</div>
                             <div class="author-info">
@@ -2707,7 +2693,8 @@ footer .social-icons {
                     <div class="testimonio-card">
                         <div class="testimonio-stars"></div>
                         <p class="testimonio-text">"Gracias Caro!! No solo preparaste nuestra barra de tragos: le pusiste tu estilo y buena onda. Quedó espectacular!!"
-</p>
+                      </p>
+					   <br>
                         <div class="testimonio-author">
                             <div class="author-avatar">C</div>
                             <div class="author-info">
@@ -2717,13 +2704,27 @@ footer .social-icons {
                         </div>
                     </div>
 					
+					   <div class="testimonio-card">
+                        <div class="testimonio-stars"></div>
+                        <p class="testimonio-text">"Hola Caro! Quería agradecerte de nuevo por el servicio. Todo muy espectacular, ustedes muy amables y profesionales. Hasta el próximo festejo!"
+</p>
+ 
+                        <div class="testimonio-author">
+                            <div class="author-avatar">T</div>
+                            <div class="author-info">
+                                <h4>Tamara</h4>
+                                <span>Cumpleaños en Tristán Suárez</span>
+                            </div>
+                        </div>
+                    </div>			
 					
-					
-					
-					                    <div class="testimonio-card">
+					<!-- duplicado -->
+                       <div class="testimonio-card">
                         <div class="testimonio-stars"></div>
                         <p class="testimonio-text">"Gracias Caro! Salió todo divino. Los detalles, la barra, ustedes!! Gracias porque no paro de recibir elogios"</p>
-                        <div class="testimonio-author">
+                         <br><br>                       
+					   <div class="testimonio-author">
+					    <br><br>
                             <div class="author-avatar">L</div>
                             <div class="author-info">
                                 <h4>Liliana</h4>
@@ -2736,6 +2737,7 @@ footer .social-icons {
                         <div class="testimonio-stars"></div>
                         <p class="testimonio-text">"La mejor barra del mundo!! Unos genios, me consintieron todo los pedidos desde el primer llamado hasta el último minuto de la fiesta"</p>
                         <div class="testimonio-author">
+						 <br><br><br><br>
                             <div class="author-avatar">C</div>
                             <div class="author-info">
                                 <h4>Carolina</h4>
@@ -2747,7 +2749,7 @@ footer .social-icons {
                     <div class="testimonio-card">
                         <div class="testimonio-stars"></div>
                         <p class="testimonio-text">"Qué lindo es contar con vos y con tu magia"</p>
-						<br><br>
+							<br><br><br>
                         <div class="testimonio-author">
                             <div class="author-avatar">B</div>
                             <div class="author-info">
@@ -2760,7 +2762,7 @@ footer .social-icons {
                     <div class="testimonio-card">
                         <div class="testimonio-stars"></div>
                         <p class="testimonio-text">"Gracias Caro!! Sos una genia, amé el servicio!! Todos mis invitados quedaron fascinados con tus tragos"</p>
-<br>
+                       <br><br>
 					  <div class="testimonio-author">
                             <div class="author-avatar">J</div>
                             <div class="author-info">
@@ -2773,7 +2775,8 @@ footer .social-icons {
                     <div class="testimonio-card">
                         <div class="testimonio-stars"></div>
                         <p class="testimonio-text">"Gracias Caro!! No solo preparaste nuestra barra de tragos: le pusiste tu estilo y buena onda. Quedó espectacular!!"
-</p>
+                      </p>
+					   <br>
                         <div class="testimonio-author">
                             <div class="author-avatar">C</div>
                             <div class="author-info">
@@ -2783,9 +2786,19 @@ footer .social-icons {
                         </div>
                     </div>
 					
-					
-					
-					
+					   <div class="testimonio-card">
+                        <div class="testimonio-stars"></div>
+                        <p class="testimonio-text">"Hola Caro! Quería agradecerte de nuevo por el servicio. Todo muy espectacular, ustedes muy amables y profesionales. Hasta el próximo festejo!"
+</p>
+ 
+                        <div class="testimonio-author">
+                            <div class="author-avatar">T</div>
+                            <div class="author-info">
+                                <h4>Tamara</h4>
+                                <span>Cumpleaños en Tristán Suárez</span>
+                            </div>
+                        </div>
+                    </div>			
 					
                 </div>
             </div>
@@ -2836,7 +2849,7 @@ footer .social-icons {
                     </button>
                     <div class="faq-answer">
                         <p>Incluye el despacho de vinos, espumantes, cervezas, etc., acordado previamente.
-También está incluído el servicio de agua y gaseosa, que se despacha desde la barra.</p>
+También está incluído el servicio de agua y gaseosa, que se despacha desde la barra (como adicional).</p>
                     </div>
                 </div>
                 <div class="faq-item">
@@ -2862,8 +2875,9 @@ También está incluído el servicio de agua y gaseosa, que se despacha desde la
                         <p>Una vez confirmada la disponibilidad, la reserva se hace efectiva abonando el 50% del total.
 El resto se abona el día del evento.</p>
                     </div>
-                </div>
-            </div>
+                </div> 
+         
+		   </div>
         </div>
     </section>
 
@@ -2915,17 +2929,16 @@ Seguime
 
       
         </div>
-        <p>© <span id="currentYear">2025</span> - Details Barras - Bartender. Todos los derechos reservados.</p>
+        <p>© <span id="currentYear">2025</span> - Detail Barras - Bartender. Todos los derechos reservados.</p>
         <p>Diseño web profesional ❤️ by <i><a href="https://seremprende.com" target="_blank" style="color:#ffa5007d">seremprende.com</a></i></p>
     </footer>
 
     <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/5491134597788?text=Hola,%20vengo%20del%20sitio%20web%20Details%20Barras%20-%20Bartender%20y%20quiero%20saber%20por%20presupuesto,%20gracias" 
+    <a href="https://wa.me/5491134597788?text=Hola,%20vengo%20del%20sitio%20web%20de%20DETAIL%20BARRAS%20y%20quiero%20saber.." 
        class="whatsapp-float" 
        target="_blank" 
        aria-label="Contactar por WhatsApp" 
        id="whatsappBtn">
-        <span class="tooltip">¡Pide tu Presupuesto Hoy!</span>
         <svg viewBox="0 0 308 308"xmlns=http://www.w3.org/2000/svg>
 
 <path d="M227.904,176.981c-0.6-0.288-23.054-11.345-27.044-12.781c-1.629-0.585-3.374-1.156-5.23-1.156
@@ -3159,9 +3172,9 @@ document.addEventListener('click', (e) => {
         {
 		
 		 title: 'Cumpleaños',
-            subtitle: 'Año 2025',
+            subtitle: '',
             description: '',
-            location: 'Cumpleaños, Buenos Aires',
+            location: 'Villa Urquiza, Buenos Aires',
             guests: '25 invitados',
             image: 'https://res.cloudinary.com/dliredzt9/image/upload/v1762542667/9._cumplea%C3%B1os-villa-urquiza-bartender-details_iik72j.webp'
            
@@ -3178,7 +3191,7 @@ document.addEventListener('click', (e) => {
         },
         {
 		    title: 'Cumpleaños',
-            subtitle: 'Año 2025',
+            subtitle: '',
             description: '',
             location: 'Villa Devoto, Buenos Aires',
             guests: '40 invitados',
@@ -3187,9 +3200,9 @@ document.addEventListener('click', (e) => {
         },
         {
 		   title: 'Cumpleaños',
-            subtitle: 'Rincón de Milberg',
+            subtitle: '',
             description: '',
-            location: 'Cumpleaños, Buenos Aires',
+            location: 'Rincón de Milberg, Buenos Aires',
             guests: '50 invitados',
             image: 'https://res.cloudinary.com/dliredzt9/image/upload/v1762542666/6._cumplea%C3%B1os-rincon-de-milberg-bartender-details_snmqiw.webp'
            
@@ -3223,7 +3236,7 @@ document.addEventListener('click', (e) => {
         },
 		  {
             title: 'Activación',
-            subtitle: 'Para Ginebra Llave',
+            subtitle: 'para Ginebra Llave',
             description: '',
             location: 'Recoleta, Buenos Aires',
             guests: '100 invitados',
@@ -3231,8 +3244,8 @@ document.addEventListener('click', (e) => {
         },
 		  {
            title: 'Empresarial',
-            subtitle: 'Para Luxo',
-            description: 'San Telmo',
+            subtitle: 'para Luxo',
+            description: '',
             location: 'Palermo Soho, Buenos Aires',
             guests: '50 invitados',
             image: 'https://res.cloudinary.com/dliredzt9/image/upload/v1762542666/1._empresarial-para-luxo-palermo-soho-bartender-details_oztlnl.webp'
@@ -3373,7 +3386,7 @@ document.addEventListener('click', (e) => {
             mensaje: formData.get('message')
         };
 
-        const texto = `Hola Caro de Details Barras! Me contacto desde tu sitio web:\n\n*Nombre:* ${data.nombre}\n*Email:* ${data.email}\n*Teléfono:* ${data.telefono}\n*Mensaje:* ${data.mensaje}`;
+        const texto = `Hola Caro de DETAIL BARRAS! Me contacto desde tu sitio web:\n\n*Nombre:* ${data.nombre}\n*Email:* ${data.email}\n*Teléfono:* ${data.telefono}\n*Mensaje:* ${data.mensaje}`;
 
         const url = `https://wa.me/5491134597788?text=${encodeURIComponent(texto)}`;
         
