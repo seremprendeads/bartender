@@ -401,7 +401,7 @@ nav {
     font-size: 5rem;
     font-weight: 700;
     letter-spacing: 5px;
-    text-shadow: 2px 2px 20px #e74c3c;
+    text-shadow: 2px 2px 20px #fc4f61;
     margin: 0;
 }
 
@@ -556,7 +556,7 @@ nav {
     left: 0;
     width: 60px;
     height: 3px;
-    background: #e74c3c;
+    background: linear-gradient(135deg, #ffd8e2 0% 0%, #ff4757 100% 100%);
 }
 
 .about-content .quote {
@@ -564,7 +564,7 @@ nav {
     font-size: 1.2rem;
     margin-bottom: 1.5rem;
     padding-left: 1.5rem;
-    border-left: 3px solid #e74c3c;
+    border-left: 3px solid #fd4e5f;
     border-radius: 20px;
 	padding: 1.5rem;
 }
@@ -578,14 +578,13 @@ nav {
 /************Servicios*************/
  /* Títulos */
 .titulo-servicio {
-  color: #ffffff;
+  background: #ffffff;
   font-size: 2rem;
   font-weight: 800;
   margin: 0.6rem 0 0.8rem;
   line-height: 1.1;
   padding-top:36px;
   text-transform: uppercase;
-    background: linear-gradient(135deg, #ea7f39 0%, #ffdfe2 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -702,11 +701,11 @@ nav {
 }
 
 .servicio-header h2 {
+    background: #ffffff;
     font-size: 4rem;
     letter-spacing: 3px;
     margin-bottom: 1rem;
     text-transform: uppercase;
-    background: linear-gradient(135deg, #ea7f39 0%, #ffdfe2 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -723,7 +722,7 @@ nav {
     transform: translateX(-50%);
     width: 100px;
     height: 4px;
-    background: linear-gradient(135deg, #fcad79 0%, #ff4757 100%);
+    background: linear-gradient(135deg, #ffeaef 0% 0%, #ff4757 100% 100%);
     border-radius: 2px;
 }
 
@@ -840,7 +839,7 @@ nav {
     transition: all 0.3s ease;
 }
 
-.
+
 
 .feature-item:hover .feature-icon {
     transform: rotateY(360deg);
@@ -962,7 +961,7 @@ nav {
 
 .btn-ver-mas {
     padding: 18px 38px;
-    background: #e74c3c;
+    background: #fd4f61;
     color: #ffffff;
     border: none;
     border-radius: 4px;
@@ -1032,7 +1031,7 @@ nav {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: #e74c3c;
+    background: #ff4757;
     border: none;
     color: #fff;
     font-size: 30px;
@@ -1090,7 +1089,7 @@ nav {
 .lightbox-info {
     flex: 1;
     padding: 40px;
-    background: #e74c3c;
+    background: #ff4757;
     overflow-y: auto;
     max-width: 40%;
 }
@@ -1168,7 +1167,7 @@ nav {
     transform: translateX(-50%);
     width: 80px;
     height: 3px;
-    background: #e74c3c;
+    background: linear-gradient(135deg, #ffeaef 0% 0%, #ff4757 100% 100%);
 }
 
 .testimonios-slider {
@@ -1228,7 +1227,7 @@ linear infinite;
 .author-avatar {
     width: 50px;
     height: 50px;
-    background: linear-gradient(135deg, #fcad79 0%, #ff4757 100%);
+    background: linear-gradient(135deg, #ffd8e2 0% 0%, #ff4757 100% 100%);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -1245,7 +1244,7 @@ linear infinite;
 }
 
 .author-info span {
-    color: #e74c3c;
+    color: #f4667d;
     font-size: 0.85rem;
 }
 
@@ -1305,7 +1304,7 @@ linear infinite;
     transform: translateX(-50%);
     width: 80px;
     height: 3px;
-    background: #e74c3c;
+    background: linear-gradient(135deg, #ffd8e2 0% 0%, #ff4757 100% 100%);
 }
 
 .faq-list {
@@ -1344,12 +1343,12 @@ linear infinite;
 }
 
 .faq-question:hover {
-    color: #e74c3c;
+    color: #f1718b;
 }
 
 .faq-icon {
     font-size: 2rem;
-    color: #e74c3c;
+    color: #f16e87;
     transition: transform 0.3s;
     font-weight: 300;
 }
@@ -2113,4 +2112,5 @@ footer .social-icons {
         width: 25px;
         height: 25px;
     }
+}
 }
