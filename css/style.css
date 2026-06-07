@@ -832,7 +832,7 @@ nav {
     width: 70px;
     height: 70px;
     margin: 0 auto 1.5rem;
-    background: linear-gradient(135deg, #fcad79 0%, #ff4757 100%);
+    background: linear-gradient(135deg, #ee7893 0% 0%, #ff4757 100% 100%);
     border-radius: 50%;
     display: flex;
     align-items: center;
